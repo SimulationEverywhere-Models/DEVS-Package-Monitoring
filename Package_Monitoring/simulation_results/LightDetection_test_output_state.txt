@@ -1,0 +1,30 @@
+00:00:00:000
+State for model input_reader is next time: 00:00:00:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:00:000
+State for model input_reader is next time: 00:00:10:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:10:000
+State for model input_reader is next time: 00:00:10:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:20:000
+State for model input_reader is next time: 00:00:05:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:25:000
+State for model input_reader is next time: 00:00:05:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:30:000
+State for model input_reader is next time: 00:00:15:000
+State for model ld1 is The box is opend. Y/N? 1
+00:00:31:000
+State for model input_reader is next time: 00:00:15:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:45:000
+State for model input_reader is next time: 00:00:10:000
+State for model ld1 is The box is opend. Y/N? 1
+00:00:46:000
+State for model input_reader is next time: 00:00:10:000
+State for model ld1 is The box is opend. Y/N? 0
+00:00:55:000
+State for model input_reader is next time: 00:00:05:000
+State for model ld1 is The box is opend. Y/N? 0

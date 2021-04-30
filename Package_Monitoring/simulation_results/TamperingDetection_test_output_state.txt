@@ -1,0 +1,40 @@
+00:00:00:000
+State for model input_reader_order is next time: 00:00:00:000
+State for model input_reader_tamper is next time: 00:00:00:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:00:000
+State for model input_reader_order is next time: 00:00:10:000
+State for model input_reader_tamper is next time: 00:00:10:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:10:000
+State for model input_reader_order is next time: 00:00:10:000
+State for model input_reader_tamper is next time: 00:00:10:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:20:000
+State for model input_reader_order is next time: 00:00:05:000
+State for model input_reader_tamper is next time: 00:00:05:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:25:000
+State for model input_reader_order is next time: 00:00:05:000
+State for model input_reader_tamper is next time: 00:00:05:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:30:000
+State for model input_reader_order is next time: 00:00:15:000
+State for model input_reader_tamper is next time: 00:00:15:000
+State for model tamd1 is The box is touched. Y/N? 1
+00:00:31:000
+State for model input_reader_order is next time: 00:00:15:000
+State for model input_reader_tamper is next time: 00:00:15:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:45:000
+State for model input_reader_order is next time: 00:00:10:000
+State for model input_reader_tamper is next time: 00:00:10:000
+State for model tamd1 is The box is touched. Y/N? 0
+00:00:55:000
+State for model input_reader_order is next time: 00:00:05:000
+State for model input_reader_tamper is next time: 00:00:05:000
+State for model tamd1 is The box is touched. Y/N? 1
+00:00:56:000
+State for model input_reader_order is next time: 00:00:05:000
+State for model input_reader_tamper is next time: 00:00:05:000
+State for model tamd1 is The box is touched. Y/N? 0

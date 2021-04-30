@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Models>
+	<Model name="PackageMonitoring" type="coupled" description="a system to monitor package status during transport">
+		<Inputs>
+			<Port name="inT" type="float" description="ambient temperature being recorded"/>	
+			<Port name="inHum" type="int" description="ambient humidity taken as int for simplicity"/>
+			<Port name="inL" type="float" description="light level inside package"/>
+			<Port name="inTamper" type="int" description="tampering detection system"/>			
+			<Port name="inTilt" type="int" description="excessive tilting detection system"/>
+		</Inputs>
+		<Outputs>
+			<Port name="outL" type="string" description="logs high light detection event"/>
+			<Port name="outTamper" type="string" description="logs tampering detection event"/>
+			<Port name="outT" type="string" description="logs heat detection event"/>
+			<Port name="outTilt" type="string" description="logs tilting detection event"/>
+			<Port name="outHum" type="string" description="logs high humidity detection event"/>
+
+		</Outputs>
+		<Files>	
+			<File name="main.cpp" type="CPP" location="/"/>
+		</Files>
+	</Model>
+	</Model>
+	<Model name="HeatDet" type="atomic" description="an atomic heat detection unit that records high temperature and triggers output accordingly">
+		<Inputs>
+			<Port name="inT" type="float" description="ambient temperature being recorded"/>			
+		</Inputs>
+		<Outputs>
+			<Port name="outT" type="string" description="logs heat detection event"/>
+			<Port name="outSlp" type="int" description="orders tilting detection model to go to sleep in case of overheating"/>	
+	
+		</Outputs>
+		<Files>
+			<File name="Excessive_Heat_Detection.hpp" type="HPP" location="/"/>
+			<File name="main_heat_test.cpp" type="CPP" location="/"/>
+		</Files>
+	</Model>
+	<Model name="TiltDet" type="atomic" description="an atomic model that checks for excessive tilting">
+		<Inputs>
+			<Port name="inTilt" type="int" description="excessive tilting detection system"/>
+			<Port name="inSlp" type="int" description="if true orders tilting detection unit to go sleep"/>
+		</Inputs>
+		<Outputs>
+			<Port name="outTilt" type="string" description="logs tilting detection event"/>
+		</Outputs>
+		<Files>
+			<File name="Tilting_Detection.hpp" type="HPP" location="/"/>
+			<File name="main_tilt_test.cpp" type="CPP" location="/"/>
+
+		</Files>
+	</Model>
+	<Model name="HumDet" type="atomic" description="an atomic humidity detection unit that records ambient humidity">
+		<Inputs>
+			<Port name="inHum" type="int" description="ambient humidity taken as int for simplicity"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="outHum" type="string" description="logs high humidity detection event"/>
+		</Outputs>
+		<Files>
+			<File name="Humidity_Detection.hpp" type="HPP" location="/"/>
+			<File name="main_hum_test.cpp" type="CPP" location="/"/>
+		</Files>
+	</Model>
+	<Model name="BOD" type="coupled" description="coupled model for detecting box opening and tampering">
+		<Inputs>
+			<Port name="inTamper" type="int" description="tampering detection system"/>				
+			<Port name="inL" type="float" description="light level inside package"/>
+		</Inputs>
+		<Outputs>
+			<Port name="outL" type="string" description="logs high light detection event"/>
+			<Port name="outTamper" type="string" description="logs tampering detection event"/>
+		</Outputs>
+		<Files>
+			<File name="main_BOD_test.cpp" type="CPP" location="/"/>
+		</Files>
+	</Model>
+	<Model name="LightDet" type="atomic" description="atomic light detection model that provides information on if and when the box was opened">
+		<Inputs>
+			<Port name="inL" type="float" description="light level inside package"/>
+		</Inputs>
+		<Outputs>
+			<Port name="outL" type="string" description="logs high light detection event"/>
+			<Port name="outO" type="int" description="orders tampering detection unit to check whether tampering will occur since box is open"/>
+
+		</Outputs>
+		<Files>
+			<File name="Light_Detection.hpp" type="HPP" location="/"/>
+			<File name="main_LD_test.cpp" type="CPP" location="/"/>
+		</Files>
+	</Model>
+	
+		<Model name="TampDet" type="atomic" description="atomic tampering detection model checks if package was touched after box opens">
+		<Inputs>
+			<Port name="inTamper" type="int" description="tampering detection system"/>
+			<Port name="inO" type="int" description="if true, wakes the tampering detection unit to check for any activity"/>
+		</Inputs>
+		<Outputs>
+			<Port name="outTamper" type="string" description="logs tampering detection event"/>
+		</Outputs>
+		<Files>
+			<File name="Tampering_Detection.hpp" type="HPP" location="/"/>
+			<File name="main_TamperingDetection_test.cpp" type="CPP" location="/"/>
+		</Files>
+	</Model>
+	
+</Models>

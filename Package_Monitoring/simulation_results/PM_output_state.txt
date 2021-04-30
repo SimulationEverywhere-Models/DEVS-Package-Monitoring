@@ -1,0 +1,6 @@
+00:00:00:000
+State for model ld1 is The box is opend. Y/N? 0
+State for model tampd1 is The box is touched. Y/N? 0
+State for model heat1 is The box is hot. Y/N? 0
+State for model tilt1 is Tilting Y/N?0
+State for model hum1 is Humidity is high Y/N? 0
